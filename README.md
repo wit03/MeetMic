@@ -1,22 +1,24 @@
-# Google-Meet-Mic2
+# MeetMic
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)](https://forthebadge.com)
 
-## CLI Commands
+[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+[Google Meet](https://meet.google.com/) microphone control powered by firestore to control google meet microphone
 
-# build for production with minification
-npm run build
+## Why?
+Started when I need to take online lession during quaruntine, I have spent most of my time on my bed instead of the screen. So when the teacher calls me, I need to get up and open the microphone on my computer.
 
-# test the production build locally
-npm run serve
+Instead of doing that, Why not just create an app that will fulfill my laziness?
 
-# run tests with jest and enzyme
-npm run test
-```
+## Getting Started
+1. Open this [web](https://meetmic.vercel.app/) on your mobile (or the device that you wish to use as an controller).
+2. Install this [extension](https://github.com/wit03/MeetMic-extension) on the computer that you wish to join the Google meet.
+3. Enter the pin code as its shown on the Google Meet
+4. Enjoy your lazy life! 
 
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+## Contributions
+feel free to create PR and also issues~
+
