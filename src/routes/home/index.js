@@ -19,6 +19,7 @@ const Home = () => {
       else {
         localStorage.setItem("userID", Math.floor(Math.random() * 900000) + 100000);
         setUserId(localStorage.getItem("userID"))
+        db.collection("user").doc(userId).set({ check: false })
       }
       ref.get().then((doc)=> {
         if(doc.exists) {
