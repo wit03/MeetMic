@@ -15,17 +15,21 @@ const Home = () => {
       const ref = db.collection("user").doc(userId);
       if (localStorage.getItem("userID") != null) {
         setUserId(localStorage.getItem("userID")) 
+        console.log('localstorage exist')
       }
       else {
         localStorage.setItem("userID", Math.floor(Math.random() * 900000) + 100000);
         setUserId(localStorage.getItem("userID"))
         db.collection("user").doc(userId).set({ check: checked })
+        console.log('localstorage dont exist')
       }
       ref.get().then((doc)=> {
         if(doc.exists) {
           setChecked(doc.data().check) 
+          console.log(doc.exists)
         }
         else {
+          console.log('doc dont exist')
           db.collection("user").doc(userId).set({ check: checked })
         }
       });
@@ -37,8 +41,7 @@ const Home = () => {
     <Fragment>
       <h1>Tap to mute</h1>
       <input type="checkbox" id="switch" onChange={handleChange} checked={checked} />
-	  <label for="switchP
-	  ">Toggle</label>
+	  <label for="switch">Toggle</label>
       <h3 class={style.id}>Your ID: {userId}</h3>
     </Fragment>
   );
