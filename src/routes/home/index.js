@@ -9,7 +9,7 @@ import 'firebase/firestore'
 
 const Home = () => {
   let db = firebase.firestore();
-  const [check, setCheck] = useState(false)
+  const [checked, setChecked] = useState(false)
   const [userId, setUserId] = useState("userid")
   useEffect( () => {
       const ref = db.collection("user").doc(userId);
@@ -19,21 +19,24 @@ const Home = () => {
       else {
         localStorage.setItem("userID", Math.floor(Math.random() * 900000) + 100000);
         setUserId(localStorage.getItem("userID"))
-        db.collection("user").doc(userId).set({ check: false })
+        db.collection("user").doc(userId).set({ check: checked })
       }
       ref.get().then((doc)=> {
         if(doc.exists) {
-          setCheck(doc.data().check) 
+          setChecked(doc.data().check) 
+        }
+        else {
+          db.collection("user").doc(userId).set({ check: checked })
         }
       });
     }, [])
   const handleChange = (e) => {
-    db.collection("user").doc(userId).set({ check: e.target.checked })
+    db.collection("user").doc(userId).set({ check:  e.target.checked})
   }
   return (
     <Fragment>
       <h1>Tap to mute</h1>
-      <input type="checkbox" id="switch" onChange={handleChange} checked={check} />
+      <input type="checkbox" id="switch" onChange={handleChange} checked={checked} />
 	  <label for="switchP
 	  ">Toggle</label>
       <h3 class={style.id}>Your ID: {userId}</h3>
