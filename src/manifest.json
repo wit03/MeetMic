@@ -1,6 +1,6 @@
 {
-  "name": "Google-Meet-Mic2",
-  "short_name": "Google-Meet-Mic2",
+  "name": "Google Meet Mic",
+  "short_name": "meetMic",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
