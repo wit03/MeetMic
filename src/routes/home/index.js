@@ -20,10 +20,9 @@ const Home = () => {
       else {
         localStorage.setItem("userID", Math.floor(Math.random() * 900000) + 100000);
         setUserId(localStorage.getItem("userID"))
-        ref.set({ check: checked })
         console.log('localstorage dont exist')
       }
-      ref.set({ check: checked })
+      ref.set({ check: false })
     }, [])
   const handleChange = (e) => {
     db.collection("user").doc(userId).set({ check:  e.target.checked})
