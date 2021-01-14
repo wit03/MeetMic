@@ -20,6 +20,7 @@ const Home = () => {
       else {
         localStorage.setItem("userID", Math.floor(Math.random() * 900000) + 100000);
         setUserId(localStorage.getItem("userID"))
+        ref.set({ check: false })
         console.log('localstorage dont exist')
       }
       ref.set({ check: false })
