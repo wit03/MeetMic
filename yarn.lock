@@ -1758,6 +1758,11 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@wit03/async-localstorage@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@wit03/async-localstorage/-/async-localstorage-1.0.1.tgz#b334425c654b1c5fd59bf3d93e3ff812e0b12c49"
+  integrity sha512-BjwpXWNe6vDP1rRj+5KtchpoIw9tMtO5Vm7hDVYfSvHoZIXUKvzlg8scGud3tN0orgdNUXZa+F57mqYRdG3ZcQ==
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"

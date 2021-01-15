@@ -27,6 +27,7 @@
     "sirv-cli": "1.0.3"
   },
   "dependencies": {
+    "@wit03/async-localstorage": "^1.0.1",
     "firebase": "^8.2.2",
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",
